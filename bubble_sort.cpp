@@ -11,6 +11,8 @@ void bubbleSort(int A[], int size)
                 A[j] = temp;
             }
         }
-
     }
+    int max = A[size-1];
+    int _2nd = A[size-2];
+    int _3rd = A[size-3];
 }
