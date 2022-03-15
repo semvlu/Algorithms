@@ -12,4 +12,7 @@ void selectionSort(int A[], int size)
         A[min] = A[i];
         A[i] = temp;
     }
+    int max = A[size-1];
+    int _2nd = A[size-2];
+    int _3rd = A[size-3];
 }
