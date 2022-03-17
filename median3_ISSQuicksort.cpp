@@ -101,8 +101,7 @@ void issQuickSort(int a[], int p, int r, int m)
 
 int main()
 {
-    double ttl = 0;
-    for (int i = 5; i <= 100; ++i) // 50 trials
+    for (int i = 5; i <= 100; ++i) // Trials of array size 5 ~ 100
     {
         int* a = new int[i];
         srand(time(NULL));
@@ -119,7 +118,8 @@ int main()
         gettimeofday(&start, NULL);
         ios_base::sync_with_stdio(false);
 
-        issQuickSort(a, 0, i - 1, i + 1);
+        issQuickSort(a, 0, i - 1, i + 1); 
+        // if m = i, the whole array will not be sorted properly
 
         // stop timer.
         gettimeofday(&end, NULL);
@@ -133,6 +133,5 @@ int main()
         time_taken = (end.tv_sec - start.tv_sec) * 1e6;
         time_taken = (time_taken + (end.tv_usec - start.tv_usec)) * 1e-6;
         cout << fixed << time_taken << setprecision(6) << " ";
-        ttl += time_taken;
     }
 }
